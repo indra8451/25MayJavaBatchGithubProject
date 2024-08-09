@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+           
+    <context:annotation-config></context:annotation-config>
+    
+    <bean id="add1" class="com.beans.MultipleBeansOfSameClass.Addition">
+    	<property name="a" value="40"></property>
+    	<property name="b" value="50"></property>
+	</bean>
+	<bean id="add2" class="com.beans.MultipleBeansOfSameClass.Addition">
+    	<property name="a" value="4"></property>
+    	<property name="b" value="5"></property>
+	</bean>
+	<bean id="add3" class="com.beans.MultipleBeansOfSameClass.Addition" >
+    	<property name="a" value="700"></property>
+    	<property name="b" value="50"></property>
+	</bean>
+	<bean id="add13" class="com.beans.MultipleBeansOfSameClass.Addition" primary="true">
+    	<property name="a" value="40"></property>
+    	<property name="b" value="9000"></property>
+	</bean>
+	<bean id="add15" class="com.beans.MultipleBeansOfSameClass.Addition">
+    	<property name="a" value="74"></property>
+    	<property name="b" value="522"></property>
+	</bean>
+	<bean id="calculator" class="com.beans.MultipleBeansOfSameClass.Calculator" >
+	</bean>
+</beans>
+
+
+

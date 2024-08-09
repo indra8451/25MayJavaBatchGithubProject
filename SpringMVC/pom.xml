@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>mvc</groupId>
+  <artifactId>SpringMVC</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+  <dependencies>
+  <!-- JUnit is a testing framework used to write and run unit tests. The 'test' scope ensures this dependency is only available during testing. -->
+  <dependency> 
+    <groupId>junit</groupId> 
+    <artifactId>junit</artifactId> 
+    <version>3.8.1</version> 
+    <scope>test</scope> 
+  </dependency> 
+  
+  <!-- Java Servlet API provides classes and interfaces to handle HTTP requests and responses. Version 3.1.0 is part of Java EE 7. -->
+  <dependency> 
+    <groupId>javax.servlet</groupId> 
+    <artifactId>javax.servlet-api</artifactId> 
+    <version>3.1.0</version> 
+  </dependency> 
+
+  <!-- Spring Core contains the fundamental classes of the Spring Framework. It is required in all Spring applications. -->
+  <dependency> 
+    <groupId>org.springframework</groupId> 
+    <artifactId>spring-core</artifactId> 
+    <version>${spring.version}</version> 
+  </dependency> 
+  
+  <!-- Spring Web MVC provides the necessary classes to develop a web application using Spring MVC framework. -->
+  <dependency> 
+    <groupId>org.springframework</groupId> 
+    <artifactId>spring-webmvc</artifactId> 
+    <version>${spring.version}</version> 
+  </dependency> 
+  
+  <!-- Jackson Databind is a library used for converting Java objects to and from JSON. It's often used when building REST APIs. -->
+  <dependency> 
+    <groupId>com.fasterxml.jackson.core</groupId> 
+    <artifactId>jackson-databind</artifactId> 
+    <version>2.4.1</version> 
+  </dependency> 
+  
+  <!-- Hibernate Core provides the core functionality of Hibernate, which is an ORM framework for handling database operations using Java objects. -->
+  <dependency> 
+    <groupId>org.hibernate</groupId> 
+    <artifactId>hibernate-core</artifactId> 
+    <version>${hibernate.version}</version> 
+  </dependency> 
+  
+  <!-- Hibernate EntityManager adds JPA support on top of Hibernate, enabling the use of the Java Persistence API (JPA). -->
+  <dependency> 
+    <groupId>org.hibernate</groupId> 
+    <artifactId>hibernate-entitymanager</artifactId> 
+    <version>${hibernate.version}</version> 
+  </dependency> 
+
+  <!-- Apache Commons DBCP is a database connection pool used for efficient database connections management. -->
+  <dependency> 
+    <groupId>commons-dbcp</groupId> 
+    <artifactId>commons-dbcp</artifactId> 
+    <version>1.4</version> 
+  </dependency> 
+  
+  <!-- Spring ORM provides integration between Spring and ORM frameworks like Hibernate, allowing the management of data persistence. -->
+  <dependency> 
+    <groupId>org.springframework</groupId> 
+    <artifactId>spring-orm</artifactId> 
+    <version>${spring.version}</version> 
+  </dependency> 
+  
+  <!-- AspectJ runtime library is used for Aspect-Oriented Programming (AOP) in Spring, which enables modularizing cross-cutting concerns like logging. -->
+  <dependency> 
+    <groupId>org.aspectj</groupId> 
+    <artifactId>aspectjrt</artifactId> 
+    <version>${org.aspectj-version}</version> 
+  </dependency> 
+  
+  <!-- MySQL Connector is a JDBC driver used to connect Java applications to a MySQL database. -->
+  <dependency> 
+    <groupId>mysql</groupId> 
+    <artifactId>mysql-connector-java</artifactId> 
+    <version>8.0.16</version> 
+  </dependency> 
+  
+  <!-- JSTL (JavaServer Pages Standard Tag Library) is a library of custom tags for JSPs, making it easier to work with data like collections and conditionals. -->
+  <dependency> 
+    <groupId>jstl</groupId> 
+    <artifactId>jstl</artifactId> 
+    <version>1.2</version> 
+  </dependency> 
+</dependencies>
+
+<properties>
+  <!-- Defining versions for Spring Framework, AspectJ, and Hibernate for consistency across the project. -->
+  <spring.version>4.2.1.RELEASE</spring.version> 
+  <security.version>4.0.3.RELEASE</security.version> 
+  <jdk.version>1.7</jdk.version> 
+  <hibernate.version>4.3.5.Final</hibernate.version> 
+  <org.aspectj-version>1.7.4</org.aspectj-version> 
+</properties>
+
+  
+</project>

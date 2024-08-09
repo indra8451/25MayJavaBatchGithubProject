@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- For Spring 6.x use https://www.springframework.org/schema/beans/spring-beans.xsd
+ For Spring 5.x use https://www.springframework.org/schema/beans/spring-beans-5.0.xsd; 
+ For Spring 4.0 use https://www.springframework.org/schema/beans/spring-beans-4.0.xsd; 
+ For Spring 3.2 use http://www.springframework.org/schema/beans/spring-beans-3.2.xsd -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           https://www.springframework.org/schema/beans/spring-beans.xsd">
+                           
+ <!-- Calling String Constructor by default -->
+
+  	<bean id="addition" class="com.beans.Addition">
+  		<constructor-arg name="a" value="1000" > </constructor-arg>
+  		<constructor-arg name="b" value="2000" ></constructor-arg>
+  	</bean>
+  	
+  <!-- To call int constructor use type Attribute
+  	
+  	<bean id="addition" class="com.beans.Addition">
+  		<constructor-arg name="a" value="1000" type="int"> </constructor-arg>
+  		<constructor-arg name="b" value="2000" type="int"></constructor-arg>
+  	</bean> -->
+  	
+  <!-- To call int constructor use type Attribute	
+  
+  	<bean id="addition" class="com.beans.Addition">
+  		<constructor-arg name="a" value="1000" type="float"> </constructor-arg>
+  		<constructor-arg name="b" value="2000" type="float"></constructor-arg>
+  	</bean>  -->
+  	
+<!--  If the String constructor is not present and both int and float constructors are defined,
+      Spring will call the first constructor whether it is float or int here float will call
+    
+  	<bean id="addition" class="com.beans.Addition">
+  		<constructor-arg name="a" value="1000" > </constructor-arg>
+  		<constructor-arg name="b" value="2000" ></constructor-arg>
+  	</bean> -->
+  	
+</beans>
+ 
+ <!-- index Attribute: Specifies the index of the constructor parameter. 
+      Indexing starts from 0
+      
+     <bean id="addition" class="com.beans.Addition">
+  		<constructor-arg  value="1000" type="float" index="0"> </constructor-arg> value of a=1000
+  		<constructor-arg  value="2000" type="float" index="1"></constructor-arg>  value of b=2000
+  	</bean> 
+      
+    <bean id="addition" class="com.beans.Addition">
+  		<constructor-arg  value="1000" type="float" index="1"> </constructor-arg> value of b=1000
+  		<constructor-arg  value="2000" type="float" index="0"></constructor-arg>  value of a=2000
+  	</bean>
+        -->

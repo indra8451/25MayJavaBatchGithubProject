@@ -1,0 +1,54 @@
+{
+  "employee": [
+    {
+      "id": 15,
+      "name": "sachin",
+      "city": "pune",
+      "address": {
+        "street": "MG Road",
+        "postalCode": "411001",
+        "state": "Maharashtra"
+      }
+    },
+    {
+      "id": 25,
+      "name": "amit",
+      "city": "mumbai",
+      "address": {
+        "street": "Marine Drive",
+        "postalCode": "400020",
+        "state": "Maharashtra"
+      }
+    },
+    {
+      "id": 35,
+      "name": "rahul",
+      "city": "delhi",
+      "address": {
+        "street": "Connaught Place",
+        "postalCode": "110001",
+        "state": "Delhi"
+      }
+    },
+    {
+      "id": 45,
+      "name": "priya",
+      "city": "bangalore",
+      "address": {
+        "street": "Brigade Road",
+        "postalCode": "560001",
+        "state": "Karnataka"
+      }
+    },
+    {
+      "id": 55,
+      "name": "kavita",
+      "city": "hyderabad",
+      "address": {
+        "street": "Banjara Hills",
+        "postalCode": "500034",
+        "state": "Telangana"
+      }
+    }
+  ]
+}

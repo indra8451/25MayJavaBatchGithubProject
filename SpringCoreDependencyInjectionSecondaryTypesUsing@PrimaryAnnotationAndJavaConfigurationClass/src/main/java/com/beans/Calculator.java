@@ -1,0 +1,23 @@
+package com.beans;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+public class Calculator {
+
+	@Autowired
+	private Addition addition;
+
+	public Addition getAddition() {
+		return addition;
+	}
+
+	public void setAddition(Addition addition) {
+		this.addition = addition;
+	}
+
+	public void addition() {
+
+		addition.Makeaddition();
+	}
+}

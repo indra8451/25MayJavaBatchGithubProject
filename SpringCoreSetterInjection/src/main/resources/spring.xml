@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="stud" class="com.beans.Student">
+    	<property name="name" value="Lorenzo"></property>
+    	<property name="mobile">
+    		<list>
+    			<value>7855566554</value>
+    			<value>9665887556</value>
+    			<value>7123456787</value>
+    		</list>
+    	</property>
+    	
+   		<property name="Addresslist">
+   			<set>
+   				<value>Mumbai</value>
+   				<value>Pune</value>
+   				<value>Satara</value>
+   			</set>
+   		</property>
+   		
+   		<property name="courses">
+   			<map>
+   				<entry key="java" value="2months"></entry>
+   				<entry key="python" value="3months"></entry>
+   				<entry key="blockchain" value="4months"></entry>
+   			</map>
+   		
+   		</property>
+    </bean>
+</beans>

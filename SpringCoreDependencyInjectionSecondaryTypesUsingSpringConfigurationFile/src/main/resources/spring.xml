@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="sub" class="com.beans.Subject">
+		<property name="Name" value="JAVA"></property>
+	</bean>
+	<bean id="sub1" class="com.beans.Subject">
+		<property name="Name" value="Python"></property>
+	</bean>
+	<bean id="sub2" class="com.beans.Subject">
+		<property name="Name" value="ReactJS"></property>
+	</bean>
+
+	<bean id="s" class="com.beans.Student">
+
+		<property name="Name" value="Rahul"></property>
+
+		<!-- Example of using <list> to inject a list with 'Subject' beans -->
+		<property name="Subjectlist">
+			<list>
+				<ref bean="sub" />
+				<ref bean="sub1" />
+				<ref bean="sub2" />
+			</list>
+		</property>
+
+		<!-- Example of using <set> to inject a set of 'Subject' beans -->
+		<property name="subjectSet">
+			<set>
+				<ref bean="sub" />
+				<ref bean="sub1" />
+				<ref bean="sub2" />
+			</set>
+		</property>
+
+		<!-- Example of using <map> to inject a map with 'Subject' beans -->
+		<property name="subjectMap">
+			<map>
+				<entry key="subject1" value-ref="sub" />
+				<entry key="subject2" value-ref="sub1" />
+				<entry key="subject3" value-ref="sub2" />
+			</map>
+		</property>
+	</bean>
+
+</beans>
+
+ 
+

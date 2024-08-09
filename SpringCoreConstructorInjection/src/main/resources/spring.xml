@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <!-- Bean definition for 'e' with constructor injection -->
+   <!-- The <constructor-arg> tags are used for constructor injection -->
+   <bean id="e" class="com.beans.Employee">
+       <constructor-arg name="employeeID" value="1001"/>
+       <constructor-arg name="name" value="Vinayak"/>
+       <constructor-arg name="salary" value="45000"/>
+       <constructor-arg name="projects">
+       		<list>
+       			<value>HDFCProject</value>
+       			<value>OTONProject</value>
+       		</list>
+       </constructor-arg>
+       <!-- Example of injecting an array using <property> with <array> -->
+       
+       <constructor-arg name="employeeLaptop">
+           <array>
+               <value>HP</value>
+               <value>Lenevo</value>
+           </array>
+       </constructor-arg>
+      
+       <!-- Injecting a list of projects using <list> -->
+       <constructor-arg name="projects">
+           <list>
+               <value>HDFCProject</value>
+               <value>OTONProject</value>
+           </list>
+       </constructor-arg>
+   </bean>
+
+</beans>
+ <!-- Example of using <set> to inject a set of project names -->
+       <!--
+       <constructor-arg name="projects">
+           <set>
+               <value>HDFCProject</value>
+               <value>OTONProject</value>
+           </set>
+       </constructor-arg>
+       -->
+       
+       <!-- Example of using <map> to inject a map of project names -->
+       <!--
+       <constructor-arg name="projects">
+           <map>
+               <entry key="project1" value="HDFCProject" />
+               <entry key="project2" value="OTONProject" />
+           </map>
+       </constructor-arg>
+       -->
